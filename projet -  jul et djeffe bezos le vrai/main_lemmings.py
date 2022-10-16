@@ -7,9 +7,9 @@ from lemmings_class import *
 
 #creation de la fenetre
 Mafenetre=Tk()
-Mafenetre.geometry('500x500')
+Mafenetre.geometry('550x550')
 #zone de dessin
-can1=Canvas(Mafenetre,bg="white",width=400,height=500)
+can1=Canvas(Mafenetre,bg="white",width=600,height=600)
 can1.place(x=0,y=0)
 # =============================================================================
 # creation d'un niveau : images - matrice - dictionnaire
@@ -21,17 +21,22 @@ casesortie=PhotoImage(file="sortie.gif")
 Lem_droite=PhotoImage(file="marioD.gif")
 Lem_gauche=PhotoImage(file="marioG.gif")
 #astuce : les cases de sortie sont toujours nommées S
-L8=["MX","C","C","C","C","C","C","MX"]
-L9=["MX","C","C","C","C","C","C","MX"]
-L0=["MX","C","MX","C","C","C","C","MX"]
-L1=["MX","C","C","C","C","C","C","MX"]
-L2=["MX","C","C","C","C","C","C","MX"]
-L3=["MX","MX","C","C","PX","MX","C","MX"]
-L4=["MX","MX","C","PX","PX","C","C","MX"]
-L5=["MX","C","C","C","PX","C","PX","PX"]
-L6=["MX","C","MX","C","C","C","C","MX"]
-L7=["MX","S","MX","MX","PX","S","MX","MX"]
-ma_matrice=[L8,L9,L0,L1,L2,L3,L4,L5,L6,L7]
+L1=["MX","C","C","C","C","C","C","C","C","C","MX"]
+L0=["MX","C","C","C","C","C","C","C","C","C","MX"]
+L2=["MX","C","MX","C","C","C","C","C","C","C","MX"]
+L3=["MX","C","C","C","C","C","C","C","C","C","MX"]
+L4=["MX","C","C","C","C","C","C","C","C","C","MX"]
+L5=["MX","MX","C","C","PX","C","C","C","MX","C","MX"]
+L6=["MX","MX","C","PX","PX","C","C","C","C","C","MX"]
+L7=["MX","C","C","C","PX","C","C","C","C","PX","PX"]
+L8=["MX","C","MX","C","C","C","C","C","C","C","MX"]
+L9=["MX","S","MX","MX","PX","C","C","C","S","MX","MX"]
+L10=["MX","MX","C","C","PX","C","C","C","MX","C","MX"]
+L11=["MX","MX","C","PX","PX","C","C","C","C","C","MX"]
+L12=["MX","C","C","C","PX","C","C","C","C","PX","PX"]
+L13=["MX","C","MX","C","C","C","C","C","C""C","MX"]
+L14=["MX","S","MX","MX","PX","S","C","C","C","MX","MX"]
+ma_matrice=[L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14]
 
 dico={"C":casesol,"PX":casemur2,"MX":casemur,"S":casesortie}
 
