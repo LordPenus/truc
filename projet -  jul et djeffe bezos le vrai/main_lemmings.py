@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep  9 15:22:53 2021
-
-@author: jeffa
-"""
-
 #modules
 from tkinter import *
 from random import randint
@@ -21,8 +14,8 @@ can1.place(x=0,y=0)
 # =============================================================================
 # creation d'un niveau : images - matrice - dictionnaire
 # =============================================================================
-caseciel=PhotoImage(file="ciel.gif")
-casepoint=PhotoImage(file="pointI.gif")
+casesol=PhotoImage(file="sol.gif")
+casemur2=PhotoImage(file="mur2.gif")
 casemur=PhotoImage(file="mur.gif")
 casesortie=PhotoImage(file="sortie.gif")
 Lem_droite=PhotoImage(file="marioD.gif")
@@ -40,7 +33,7 @@ L6=["MX","C","MX","C","C","C","C","MX"]
 L7=["MX","S","MX","MX","PX","S","MX","MX"]
 ma_matrice=[L8,L9,L0,L1,L2,L3,L4,L5,L6,L7]
 
-dico={"C":caseciel,"PX":casepoint,"MX":casemur,"S":casesortie}
+dico={"C":casesol,"PX":casemur2,"MX":casemur,"S":casesortie}
 
 
 niveau1 = Jeu(ma_matrice,dico,can1,["MX","PX"])
@@ -54,9 +47,8 @@ niveau1.ajoute_liste_perso(perso2)
 
 def deplace(perso):
     """deplace un perso en suivant les règles du jeu lemmings"""
-    if 
     
-    elif niveau1.get_nature_case_dessous(perso) == True :
+    if niveau1.get_nature_case_dessous(perso) == True :
         niveau1.changement_nature_case(perso)
         perso.deplace_bas()
         niveau1.changement_nature_case(perso)
